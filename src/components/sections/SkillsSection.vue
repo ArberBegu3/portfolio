@@ -279,6 +279,7 @@ onMounted(() => {
 
 .wow-talent-trees {
   display: flex;
+  justify-content: center;
   gap: 3rem;
   flex: 1;
   align-items: flex-start;
@@ -288,12 +289,14 @@ onMounted(() => {
 }
 
 .wow-talent-trees.trees-visible {
+  align-items: center;
   opacity: 1;
   transform: scale(1);
 }
 
 .talent-tree {
   flex: 1;
+  min-height: 375px;
   background: linear-gradient(180deg, rgba(139, 69, 19, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
   border: 2px solid #8b4513;
   border-radius: 12px;
@@ -341,7 +344,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  min-height: 200px;
+  min-height: 100px;
   position: relative;
   padding: 0.5rem 0;
 }
@@ -776,7 +779,8 @@ onMounted(() => {
   }
 
   .skill-info-content{
-    max-width: 800px;
+    max-width: 650px;
+
   }
   .skill-info-body {
     grid-template-columns: 1fr; /* stack vertically */
@@ -798,21 +802,24 @@ onMounted(() => {
 
 /* ===== Tablet / Small: ≤768px ===== */
 @media (max-width: 768px) {
-.skill-info-panel{
-  max-width: 700px;
-  position: relative;
-  margin: 10px;
-}
+.skill-info-panel {
+    position: fixed; /* keep it overlaying */
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    max-width: calc(100% - 20px);
+    margin: 0;
+  }
 
   .skills-content{
     height: auto;
-    padding: 15px;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
   }
   .wow-talent-trees {
-    margin: 10px;
     flex-direction: row;
     gap: 1rem;
-    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -826,6 +833,7 @@ onMounted(() => {
 
   .talent-grid {
     gap: 0.4rem;
+    margin: 0;
   }
 
   .talent-tier {
@@ -894,8 +902,8 @@ onMounted(() => {
   }
 
   .talent-tree {
+    min-height: 100px;
     height: auto;
-    max-height: 250px;
     width: 100%;
     padding: 0.2;
     margin: 0;
@@ -936,18 +944,19 @@ onMounted(() => {
     font-size: 1rem;
   }
 
-  .skill-info-body{
-    display: none;
-  }
-
-  .skill-info-title-section{
-    margin-right: 3rem;
+  .skill-info-content{
+    margin: 0;
+    padding: 1rem;
   }
 
   .skill-info-panel.panel-visible{
-    width: 100%;
-    margin: 0;
+    width: 350px;
+    margin: auto;
   }
+
+  .portal {
+  right: 20px;
+}
 }
 
 

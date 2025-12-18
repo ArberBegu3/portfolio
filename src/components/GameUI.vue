@@ -131,4 +131,47 @@ watchEffect(() => {
   border: 1px solid var(--accent-color);
 }
 
+@media (max-width: 1024px) {
+  .game-ui{
+    display: flex;
+    padding: 0.6rem;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .controls-hint {
+    font-size: 0;
+  }
+
+  .controls-hint::after {
+    content: "Click on Portal to navigate to the next level.";
+    font-size: 0.9rem;
+    white-space: pre-line;
+    display: block;
+  } 
+
+  .level-indicator{
+    display: none;
+  }
+
+  .score-indicator{
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+
+    .controls-hint {
+      border: none;
+    }
+
+    .game-ui{
+      top: 0.4rem;
+      left: 0.2rem;
+      padding: 0.1rem;
+    }
+  }
+
+}
 </style>

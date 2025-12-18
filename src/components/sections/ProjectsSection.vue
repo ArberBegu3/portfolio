@@ -55,7 +55,7 @@ const projects = ref(PROJECTS_DATA)
   font-size: 2.5rem;
   color: var(--accent-color);
   text-shadow: 0 0 20px var(--accent-color);
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 7rem 0;
   text-align: center;
   flex-shrink: 0;
 }
@@ -125,19 +125,20 @@ const projects = ref(PROJECTS_DATA)
    =========================== */
 @media (max-width: 1024px) {
   .projects-content {
-    height: auto;
-    overflow-y: visible;
+    margin-top: 5rem;
+    padding: 1.4rem;
   }
 
   .projects-title {
-    display: none;
+    font-size: 1.8rem;
+    margin: 0;
+    margin-top: 3.2rem;
   }
 
   .projects-grid {
-    grid-template-columns:1fr 1fr;
-    max-height: none;
-    overflow-y: visible;
-    padding-bottom: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    height: auto;
   }
 }
 
@@ -145,19 +146,18 @@ const projects = ref(PROJECTS_DATA)
    SMALL TABLET / PHONE (<=768px)
    =========================== */
 @media (max-width: 768px) {
-  .projects-content {
-    margin-top: 5rem;
-    padding: 1.5rem;
-  }
 
   .projects-title {
     font-size: 1.8rem;
+    margin: 0;
+    margin-top: 1.5rem;
   }
 
   .projects-grid {
-    gap: 1rem;
-    padding: 2rem;
-    height: auto;
+    gap: 0.5rem;
+    padding: 0.4rem;
+    height: 100%;
+    justify-content: center;
   }
 }
 
@@ -168,7 +168,7 @@ const projects = ref(PROJECTS_DATA)
 
   .projects-content{
     height: fit-content;
-    margin: 13rem 0 0 0;
+    margin: 3rem 0 0 0;
   }
 
   .projects-title {
@@ -176,9 +176,14 @@ const projects = ref(PROJECTS_DATA)
   }
 
   .projects-grid {
+    max-height: 500px;
     grid-template-columns: 1fr;
     gap: 0.8rem;
     padding-bottom: 160px;
+  }
+
+  .portal{
+    right: 20px;
   }
 }
 

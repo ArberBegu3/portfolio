@@ -6,9 +6,7 @@
       <div class="about-grid">
         <div class="about-text" :class="{ 'hero-hover': isHeroHovering }" ref="aboutElement">
           <p>
-            I'm a passionate developer who loves creating interactive experiences and building
-            robust applications. With expertise in both frontend and backend technologies, I enjoy
-            tackling complex challenges and turning ideas into reality.
+            I’m a passionate junior developer, ready to take the lead and face every challenge in building websites and apps. With experience in both frontend and backend technologies, I am eager to learn, grow, and turn ideas into real, powerful projects.
           </p>
         </div>
         <div class="stats-grid">
@@ -170,38 +168,52 @@ onMounted(() => {
 
 /* ====== Responsive: ≤768px (tablet) ====== */
 @media (max-width: 768px) {
+
+  .about-title{
+    margin-bottom: 0;
+  }
   .about-grid {
     display: flex;
     flex-direction: column; /* Stack content vertically */
-    gap: 1rem;
+    gap: 0;
   }
 
   .about-text {
-    order: 1; /* Ensure text comes first */
+    order: 1; 
+    margin: 0;
   }
 
   .stats-grid {
-    order: 2; /* Stats come below text */
+    order: 2;
+    margin: 1rem; /* Stats come below text */
   }
 }
 
 
 /* ====== Responsive: ≤480px (mobile) ====== */
 @media (max-width: 480px) {
+
+  
+
   .about-content {
     padding: 0 12px;
+    z-index: 0;
   }
 
   .about-text {
     font-size: 0.9rem;
     line-height: 1.5;
-    padding: 1rem;
+    padding: 0.8rem;
     margin: 8px;
     border-radius: 8px;
   }
   .stats-grid {
     grid-template-columns: repeat(2 ,1fr);
     gap: 0.6rem;
+  }
+
+  .portal{
+    right: 20px;
   }
 }
 

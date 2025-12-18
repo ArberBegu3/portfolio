@@ -125,4 +125,10 @@ const bugEnemies = computed(() => gameStore.bugEnemies)
     opacity: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .bug-enemy{
+    display: none;
+  }
+}
 </style>

@@ -55,7 +55,7 @@ import ContactMethod from '../ContactMethod.vue'
 
 .contact-content {
   max-width: 800px;
-  padding: 4rem 20px;
+  padding: 2rem 1rem;
   z-index: 2;
   width: 100%;
   margin: 0 auto;
@@ -66,14 +66,14 @@ import ContactMethod from '../ContactMethod.vue'
   font-size: 3rem;
   color: var(--accent-color);
   text-shadow: 0 0 20px var(--accent-color);
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
   text-align: center;
 }
 
 .contact-description {
   font-size: 1.3rem;
   color: var(--text-light);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
 }
 
@@ -81,7 +81,7 @@ import ContactMethod from '../ContactMethod.vue'
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .game-complete {
@@ -105,17 +105,29 @@ import ContactMethod from '../ContactMethod.vue'
 }
 
 @media (max-width: 768px) {
+  
   .contact-methods {
-    grid-template-columns: 1fr;
     gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-method {
+    justify-content: center;
+    padding: 1rem;
   }
 
   .contact-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .contact-description {
     font-size: 1.1rem;
+  }
+
+  .game-complete h3{
+    font-size: 1.5rem;
   }
 }
 </style>

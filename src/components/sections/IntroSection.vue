@@ -10,7 +10,7 @@
         <p>Click the portal or press → to continue</p>
       </div>
     </div>
-    <div class="portal" :class="{ 'portal-active': isPortalActive }" />
+    <div class="portal" @click="$emit('next')" />
   </section>
 </template>
 
@@ -86,7 +86,7 @@ onMounted(() => {
   border-radius: 10px;
   border: 2px solid var(--accent-color);
   margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 1s ease, box-shadow 1s ease;
 }
 
 .game-instructions:hover,
@@ -150,5 +150,11 @@ onMounted(() => {
   0% { opacity: 0.6; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.05); }
   100% { opacity: 0.6; transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+  .portal{
+    right: 20px;
+  }
 }
 </style>
