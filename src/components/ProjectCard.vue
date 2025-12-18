@@ -155,7 +155,7 @@ defineExpose({
   position: relative;
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); 
 }
 
 .game-project-card:hover,
@@ -170,7 +170,7 @@ defineExpose({
 /* Game Banner */
 .game-banner {
   position: relative;
-  height: 70px;
+  height: 40px;
   overflow: hidden;
   background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
   flex-shrink: 0;
@@ -345,7 +345,7 @@ defineExpose({
 
 /* Game Info */
 .game-info {
-  padding: 0.8rem;
+  padding: 0.5rem;
   background: linear-gradient(180deg, rgba(40, 40, 40, 0.3) 0%, rgba(20, 20, 20, 0.5) 100%);
   flex: 1;
   display: flex;

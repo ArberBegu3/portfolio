@@ -341,7 +341,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  min-height: 300px;
+  min-height: 200px;
   position: relative;
   padding: 0.5rem 0;
 }
@@ -549,7 +549,8 @@ onMounted(() => {
 
 .skill-info-content {
   padding: 1.5rem 2rem;
-  max-width: 1200px;
+  width: auto;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -737,166 +738,48 @@ onMounted(() => {
   }
 }
 
-@media (max-width: 1200px) {
+/* ===== Desktop Large: ≤1200px ===== */
+/* ===== Desktop Large: ≤1200px ===== */
+@media (max-width: 1024px) {
+
+  .skills-title{
+    display: none;
+  }
+
   .wow-talent-trees {
-    flex-direction: column;
+    flex-direction: row; /* keep horizontal */
     gap: 2rem;
     align-items: center;
   }
 
   .talent-tree {
-    width: 100%;
-    max-width: 400px;
+    max-width: 350px;
+    padding: 1.2rem;
   }
 
-  .skill-info-body {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .skill-info-content {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Base layout adjustments */
-  .skills-section {
-    padding-top: 14rem;
-    overflow-y: auto;
-    height: auto;
-    min-height: 100vh;
-  }
-
-  .skills-content {
-    padding: 15px;
-    height: auto;
-    overflow-y: auto;
-  }
-
-  .skills-title {
-    display: none;
-  }
-
-  /* Stack talent trees vertically */
-  .wow-talent-trees {
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .talent-tree {
-    width: 50%;
-    max-width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Adjust talent grid for mobile */
-  .talent-grid {
-    min-height: auto;
-    gap: 0.5rem;
-  }
-
-  .talent-tier {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.3rem;
-    margin-bottom: 0.5rem;
-  }
-
-  /* Slightly smaller talent nodes for mobile */
   .talent-node {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   .talent-icon {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
   .talent-icon img {
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
   }
 
-  .talent-ranks {
-    font-size: 0.6rem;
-    padding: 0 2px;
-    bottom: -1px;
-    right: -1px;
+  .skill-info-panel.panel-visible{
+    width: auto;
   }
 
-  .talent-name {
-    font-size: 0.6rem;
-    max-width: 50px;
+  .skill-info-content{
+    max-width: 800px;
   }
-
-  /* Tree header adjustments */
-  .tree-header {
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .tree-icon {
-    display: none;
-  }
-
-  .tree-title {
-    font-size: 1.1rem;
-  }
-
-  /* Skill info panel improvements */
-  .skill-info-panel {
-    position: fixed;
-    width: 100vw;
-    max-height: 60vh;
-    overflow-y: auto;
-    border-top-width: 2px;
-  }
-
-  .skill-info-content {
-    padding: 1rem;
-  }
-
-  .skill-info-header {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .skill-info-icon {
-    min-width: 45px;
-    min-height: 45px;
-    font-size: 1.8rem;
-  }
-
-  .skill-info-icon img {
-    width: 25px;
-    height: 25px;
-  }
-
-  .skill-info-title {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .skill-info-rank {
-    font-size: 0.9rem;
-  }
-
-  .close-panel-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    font-size: 1.3rem;
-  }
-
   .skill-info-body {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr; /* stack vertically */
     gap: 1rem;
   }
 
@@ -904,63 +787,169 @@ onMounted(() => {
     padding: 0.8rem;
   }
 
-  .section-label {
+  .skill-info-title {
+    font-size: 1.5rem;
+  }
+
+  .skill-info-rank {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .skill-description,
-  .prerequisites-list {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .status-badge {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
-
-  /* Portal adjustments for mobile */
-  
-
-  /* Touch-friendly hover states */
-  .talent-node:hover {
-    transform: none; /* Disable hover effects on mobile */
-  }
-
-  .talent-node:active {
-    transform: scale(0.95);
-    border-color: #ff6b35;
-  }
-
-  /* Hide complex connection lines on mobile */
-  .skill-connection-line {
-    display: none;
   }
 }
 
-/* Additional small screen optimization */
-@media (max-width: 480px) {
-  .skills-title {
-    font-size: 1.7rem;
+/* ===== Tablet / Small: ≤768px ===== */
+@media (max-width: 768px) {
+.skill-info-panel{
+  max-width: 700px;
+  position: relative;
+  margin: 10px;
+}
+
+  .skills-content{
+    height: auto;
+    padding: 15px;
+  }
+  .wow-talent-trees {
+    margin: 10px;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .talent-tree {
+    width: 45%;
+    height: auto;
+    max-height: 400px;
+    padding: 1rem;
+  }
+
+  .talent-grid {
+    gap: 0.4rem;
+  }
+
+  .talent-tier {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3rem;
   }
 
   .talent-node {
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
   }
 
   .talent-icon {
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .talent-icon img {
+    width: 30px;
+    height: 30px;
   }
 
   .talent-name {
-    font-size: 0.5rem;
-    max-width: 45px;
+    font-size: 0.7rem;
+    max-width: 60px;
+  }
+
+
+  .skill-info-body {
+    grid-template-columns: 1fr; /* stack vertically */
+    gap: 1rem;
+  }
+
+  .skill-info-section {
+    padding: 0.8rem;
+  }
+
+  .skill-info-title {
+    font-size: 1.5rem;
+  }
+
+  .skill-info-rank {
+    font-size: 1rem;
+  }
+}
+
+/* ===== Mobile: ≤480px ===== */
+@media (max-width: 480px) {
+
+  .skills-title{
+    display: none;
+  }
+
+  .wow-talent-trees {
+    height: auto;
+    flex-direction: column; /* stack vertically */
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .tree-header{
+    margin: 0;
+  }
+
+  .tree-icon {
+    display: none;
+  }
+
+  .talent-tree {
+    height: auto;
+    max-height: 250px;
+    width: 100%;
+    padding: 0.2;
+    margin: 0;
+  }
+
+  .talent-grid {
+    gap: 0.3rem;
+  }
+
+  .talent-tier {
+    gap: 0.2rem;
+  }
+
+  .talent-slot{
+    height: fit-content;
+  }
+
+  .talent-node {
+    width: 45px;
+    height: 45px;
+  }
+
+  .talent-icon {
+    font-size: 1.3rem;
+  }
+
+  .talent-icon img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .talent-name {
+    font-size: 0.6rem;
+    max-width: 50px;
   }
 
   .tree-title {
     font-size: 1rem;
   }
+
+  .skill-info-body{
+    display: none;
+  }
+
+  .skill-info-title-section{
+    margin-right: 3rem;
+  }
+
+  .skill-info-panel.panel-visible{
+    width: 100%;
+    margin: 0;
+  }
 }
+
+
+
 </style>

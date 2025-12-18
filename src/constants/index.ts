@@ -359,7 +359,7 @@ export const PROJECTS_DATA = [
   {
   id: 4,
     title: 'Employee Management System',
-    description: 'A full-stack web application for managing departments, employees, and tasks. Features include user role management, a secure PostgreSQL database, and a complete CRUD interface built with React.js and Express.js. Successfully delivered as the final project for my Junior Web Developer certification.',
+    description: 'A full-stack web application for managing departments, employees, and tasks. Includes user role management, a secure PostgreSQL database, and a complete CRUD interface.',
     tech: ['React.js', 'Express.js', 'PostgreSQL', 'JavaScript', 'Figma'],
     image: '/project4.svg',
     github: 'https://github.com/ArberBegu3/employee-management',

@@ -12,7 +12,7 @@
           </p>
         </div>
         <div class="stats-grid">
-          <StatCard number="5+" label="Projects Completed" />
+          <StatCard number="4+" label="Projects Completed" />
           <StatCard number="2+" label="Years Experience" />
           <StatCard number="10+" label="Technologies" />
           <StatCard number="100%" label="Coffee Powered" />
@@ -144,17 +144,65 @@ onMounted(() => {
   }
 }
 
-@media (max-width: 768px) {
-  .about-title{
-    display: none;
+/* ====== Responsive: ≤1200px ====== */
+@media (max-width: 1024px) {
+  .about-content {
+    max-width: 900px;
+    margin: 1rem 2rem;
+    padding: 1rem;
   }
+
+  .about-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
   .about-grid {
-    grid-template-columns: 1fr;
     gap: 2rem;
   }
 
+  .about-text {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+}
+
+/* ====== Responsive: ≤768px (tablet) ====== */
+@media (max-width: 768px) {
+  .about-grid {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 1rem;
+  }
+
+  .about-text {
+    order: 1; /* Ensure text comes first */
+  }
+
   .stats-grid {
-    grid-template-columns: 1fr 1fr;
+    order: 2; /* Stats come below text */
   }
 }
+
+
+/* ====== Responsive: ≤480px (mobile) ====== */
+@media (max-width: 480px) {
+  .about-content {
+    padding: 0 12px;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 1rem;
+    margin: 8px;
+    border-radius: 8px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2 ,1fr);
+    gap: 0.6rem;
+  }
+}
+
 </style>

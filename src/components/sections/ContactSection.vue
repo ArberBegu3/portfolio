@@ -55,7 +55,7 @@ import ContactMethod from '../ContactMethod.vue'
 
 .contact-content {
   max-width: 800px;
-  padding: 0 20px;
+  padding: 4rem 20px;
   z-index: 2;
   width: 100%;
   margin: 0 auto;

@@ -27,7 +27,8 @@ const projects = ref(PROJECTS_DATA)
 <style scoped>
 .game-section {
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -40,16 +41,14 @@ const projects = ref(PROJECTS_DATA)
 
 .projects-content {
   max-width: 1400px;
-  padding: 20px;
-  z-index: 2;
   width: 100%;
   height: 100vh;
+  padding: 6vh 0 0 1rem;
+  padding-top: 6vh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  justify-content: flex-start;
   align-items: center;
-  padding-top: 10vh;
+  box-sizing: border-box;
 }
 
 .projects-title {
@@ -63,15 +62,12 @@ const projects = ref(PROJECTS_DATA)
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(4 ,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  margin: 0 auto;
-  max-height: 65vh;
+  max-height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 30px 10px 20px 10px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) rgba(255, 255, 255, 0.1);
+  padding: 0 3rem;
 }
 
 .projects-grid::-webkit-scrollbar {
@@ -124,43 +120,66 @@ const projects = ref(PROJECTS_DATA)
   }
 }
 
+/* ===========================
+   TABLET & BELOW (<=1024px)
+   =========================== */
 @media (max-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .projects-content {
+    height: auto;
+    overflow-y: visible;
   }
 
   .projects-title {
-    font-size: 2rem;
-    margin: 1.5rem 0 1rem 0;
+    display: none;
+  }
+
+  .projects-grid {
+    grid-template-columns:1fr 1fr;
+    max-height: none;
+    overflow-y: visible;
+    padding-bottom: 0;
   }
 }
 
+/* ===========================
+   SMALL TABLET / PHONE (<=768px)
+   =========================== */
 @media (max-width: 768px) {
   .projects-content {
-    padding: 15px;
+    margin-top: 5rem;
+    padding: 1.5rem;
   }
 
   .projects-title {
     font-size: 1.8rem;
-    margin: 1rem 0;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 0 5px 80px 5px;
+    padding: 2rem;
+    height: auto;
   }
 }
 
+/* ===========================
+   MOBILE (<=480px)
+   =========================== */
 @media (max-width: 480px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+
+  .projects-content{
+    height: fit-content;
+    margin: 13rem 0 0 0;
   }
 
   .projects-title {
     font-size: 1.5rem;
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding-bottom: 160px;
+  }
 }
+
 </style>
