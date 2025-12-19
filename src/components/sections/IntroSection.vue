@@ -3,7 +3,7 @@
     <Particles />
     <div class="intro-content">
       <h1 class="intro-title">Arber Begu</h1>
-      <p class="intro-subtitle">Full-Stack Developer</p>
+      <p class="intro-subtitle">Junior Web Developer</p>
       <div class="game-instructions" :class="{ 'hero-hover': isHeroHovering }" ref="instructionsElement">
         <p>Welcome to my interactive portfolio!</p>
         <p>Navigate through the levels to learn more about me.</p>
@@ -86,7 +86,7 @@ onMounted(() => {
   border-radius: 10px;
   border: 2px solid var(--accent-color);
   margin-bottom: 2rem;
-  transition: transform 1s ease, box-shadow 1s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .game-instructions:hover,
@@ -152,9 +152,40 @@ onMounted(() => {
   100% { opacity: 0.6; transform: scale(1); }
 }
 
-@media (max-width: 480px) {
-  .portal{
-    right: 20px;
+@media (max-width: 600px) {
+
+  .intro-content {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .intro-title {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .game-instructions {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;;
+  }
+
+  .game-instructions p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .portal {
+    width: 60px;
+    height: 60px;
+    bottom: 5rem;
+    right: 2rem;
   }
 }
 </style>

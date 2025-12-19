@@ -28,7 +28,7 @@ const projects = ref(PROJECTS_DATA)
 .game-section {
   width: 100vw;
   height: auto;
-  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@ const projects = ref(PROJECTS_DATA)
 .projects-content {
   max-width: 1400px;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   padding: 6vh 0 0 1rem;
   padding-top: 6vh;
   display: flex;
@@ -66,12 +66,14 @@ const projects = ref(PROJECTS_DATA)
   gap: 1.5rem;
   max-height: 80vh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   overflow-x: hidden;
   padding: 0 3rem;
 }
 
 .projects-grid::-webkit-scrollbar {
-  width: 8px;
+  width: 0.4rem;
 }
 
 .projects-grid::-webkit-scrollbar-track {
@@ -150,16 +152,15 @@ const projects = ref(PROJECTS_DATA)
   .projects-title {
     font-size: 1.8rem;
     margin: 0;
-    margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .projects-grid {
-    gap: 0.5rem;
-    padding: 0.4rem;
-    height: 100%;
-    justify-content: center;
+    max-height: none;
+    overflow-y: visible;
   }
 }
+
 
 /* ===========================
    MOBILE (<=480px)
@@ -179,11 +180,13 @@ const projects = ref(PROJECTS_DATA)
     max-height: 500px;
     grid-template-columns: 1fr;
     gap: 0.8rem;
-    padding-bottom: 160px;
   }
 
-  .portal{
-    right: 20px;
+  .portal {
+    width: 60px;
+    height: 60px;
+    bottom: 5rem;
+    right: 2rem;
   }
 }
 

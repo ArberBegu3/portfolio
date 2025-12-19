@@ -42,7 +42,9 @@ import ContactMethod from '../ContactMethod.vue'
 <style scoped>
 .game-section {
   width: 100vw;
-  height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  height: auto;
   position: relative;
   display: flex;
   align-items: center;
@@ -107,7 +109,7 @@ import ContactMethod from '../ContactMethod.vue'
 @media (max-width: 768px) {
   
   .contact-methods {
-    gap: 1rem;
+    gap: 0.3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,7 +117,7 @@ import ContactMethod from '../ContactMethod.vue'
 
   .contact-method {
     justify-content: center;
-    padding: 1rem;
+    gap: 0.5rem;
   }
 
   .contact-title {
@@ -123,11 +125,12 @@ import ContactMethod from '../ContactMethod.vue'
   }
 
   .contact-description {
-    font-size: 1.1rem;
+    display: none;
   }
 
   .game-complete h3{
     font-size: 1.5rem;
+    margin: 0;
   }
 }
 </style>

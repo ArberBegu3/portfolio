@@ -814,7 +814,7 @@ onMounted(() => {
   .skills-content{
     height: auto;
     margin: 0;
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 0;
   }
   .wow-talent-trees {
@@ -895,6 +895,7 @@ onMounted(() => {
 
   .tree-header{
     margin: 0;
+    padding: 0;
   }
 
   .tree-icon {
@@ -905,7 +906,7 @@ onMounted(() => {
     min-height: 100px;
     height: auto;
     width: 100%;
-    padding: 0.2;
+    padding: 0.4rem;
     margin: 0;
   }
 
@@ -955,8 +956,11 @@ onMounted(() => {
   }
 
   .portal {
-  right: 20px;
-}
+    width: 60px;
+    height: 60px;
+    bottom: 5rem;
+    right: 2rem;
+  }
 }
 
 

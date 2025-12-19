@@ -68,4 +68,11 @@ defineExpose({
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+
+@media (max-width: 600px) {
+  .stat-card{
+    padding: 0.2rem;
+  }
+}
 </style>

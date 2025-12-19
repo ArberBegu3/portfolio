@@ -5,8 +5,7 @@
       <h2 class="about-title">// About Me</h2>
       <div class="about-grid">
         <div class="about-text" :class="{ 'hero-hover': isHeroHovering }" ref="aboutElement">
-          <p>
-            I’m a passionate junior developer, ready to take the lead and face every challenge in building websites and apps. With experience in both frontend and backend technologies, I am eager to learn, grow, and turn ideas into real, powerful projects.
+          <p>I’m a passionate developer, ready to take the lead and tackle every challenge in building websites and applications. With experience in both frontend and backend technologies, I am eager to learn, grow, and bring web projects to life.
           </p>
         </div>
         <div class="stats-grid">
@@ -167,54 +166,47 @@ onMounted(() => {
 }
 
 /* ====== Responsive: ≤768px (tablet) ====== */
-@media (max-width: 768px) {
-
-  .about-title{
-    margin-bottom: 0;
+@media (max-width: 600px) {
+  .about-content {
+    padding: 0 12px;
   }
+
+  .about-title {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
   .about-grid {
     display: flex;
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column;
     gap: 0;
   }
 
   .about-text {
-    order: 1; 
+    font-size: 0.82rem;
+    line-height: 1.45;
+    padding: 0.4rem;
     margin: 0;
+    border-width: 1px;
   }
 
   .stats-grid {
-    order: 2;
-    margin: 1rem; /* Stats come below text */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .portal {
+    width: 60px;
+    height: 60px;
+    bottom: 5rem;
+    right: 2rem;
+    z-index: 3;
   }
 }
 
 
-/* ====== Responsive: ≤480px (mobile) ====== */
-@media (max-width: 480px) {
 
-  
 
-  .about-content {
-    padding: 0 12px;
-    z-index: 0;
-  }
 
-  .about-text {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    padding: 0.8rem;
-    margin: 8px;
-    border-radius: 8px;
-  }
-  .stats-grid {
-    grid-template-columns: repeat(2 ,1fr);
-    gap: 0.6rem;
-  }
-
-  .portal{
-    right: 20px;
-  }
-}
 
 </style>
